@@ -24,12 +24,14 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import Login from './Components/Screens/Login';
+import GetStarted from './Components/Screens/Registration/index'
 
 class App extends React.Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <Login />
+        {/* <Login /> */}
+        <GetStarted />
       </View>
     );
   }

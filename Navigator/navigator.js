@@ -1,22 +1,33 @@
 
 
-import { createStackNavigator, createDrawerNavigator, createAppContainer, DrawerItems , createSwitchNavigator} from "react-navigation";
+import {  createDrawerNavigator, createAppContainer, DrawerItems , createSwitchNavigator} from "react-navigation";
+import Login from '../Components/Screens/Login/index'
+import Registeration from '../Components/Screens/Registration/index'
+import GetStarted from '../Components/Screens/Registration/getstarted'
+import { createStackNavigator } from 'react-navigation-stack';
 
 
-
-// const MainScreenNavigator = createStackNavigator({
+const AuthStack = createStackNavigator({
    
    
-//     Home: { screen:  },
+    Login: { 
+        screen: Login
+    },
   
-    
+    GetStarted: {
+        screen : GetStarted
+    },
+
+    Registeration: {
+        screen: Registeration
+    }
   
-//   });
+  });
 
 
 const SwithNavigator = createSwitchNavigator({
     Auth: {
-        screen: "LoginStack"
+        screen: AuthStack
     },
 
     App: {
@@ -29,3 +40,6 @@ const SwithNavigator = createSwitchNavigator({
 
 
 })
+
+const Navigator = createAppContainer(SwithNavigator);
+export default Navigator;

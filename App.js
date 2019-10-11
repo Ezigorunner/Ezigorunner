@@ -23,15 +23,16 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import Login from './Components/Screens/Login';
-import GetStarted from './Components/Screens/Registration/index'
+// import Login from './Components/Screens/Login';
+// import GetStarted from './Components/Screens/Registration/getstarted'
+import Navigator from "./Navigator/navigator"
 
 class App extends React.Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
         {/* <Login /> */}
-        <GetStarted />
+        <Navigator />
       </View>
     );
   }

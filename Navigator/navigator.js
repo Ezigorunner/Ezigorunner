@@ -1,10 +1,15 @@
 
 
-import {  createDrawerNavigator, createAppContainer, DrawerItems , createSwitchNavigator} from "react-navigation";
+import { createAppContainer, DrawerItems , createSwitchNavigator} from "react-navigation";
 import Login from '../Components/Screens/Login/index'
 import Registeration from '../Components/Screens/Registration/index'
 import GetStarted from '../Components/Screens/Registration/getstarted'
+import Verify from '../Components/Screens/Registration/verify'
+import Setting from '../Components/Screens/Settings/index'
 import { createStackNavigator } from 'react-navigation-stack';
+import { createDrawerNavigator } from 'react-navigation-drawer'
+import MyProfile from '../Components/Screens/MyProfile/index'
+import ChangePassword from '../Components/Screens/ChangePassword/index'
 
 
 const AuthStack = createStackNavigator({
@@ -14,15 +19,55 @@ const AuthStack = createStackNavigator({
         screen: Login
     },
   
+    
+    Registeration: {
+        screen: Registeration
+    },
+
     GetStarted: {
         screen : GetStarted
     },
 
-    Registeration: {
-        screen: Registeration
-    }
+    Verify: {
+        screen : Verify
+    },
+
   
   });
+
+  const AppStack = createStackNavigator({
+   
+    Setting: { 
+        screen: Setting
+    },
+
+    MyProfile: {
+        screen: MyProfile
+    },
+
+    ChangePassword: {
+        screen: ChangePassword
+    },
+
+  
+  
+  });
+
+  const AppStackDrawer = createDrawerNavigator({
+
+    Setting: {
+        screen: AppStack
+    },
+    MyProfile: {
+        screen: MyProfile
+    },
+
+
+
+  })
+
+  
+
 
 
 const SwithNavigator = createSwitchNavigator({
@@ -31,13 +76,10 @@ const SwithNavigator = createSwitchNavigator({
     },
 
     App: {
-        screen: "AppStack"
+        screen: AppStackDrawer
     },
 
-    // Loader: {
-    //     screen: LoaderStack
-    // },
-
+    
 
 })
 

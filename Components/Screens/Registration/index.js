@@ -45,7 +45,7 @@ export default class Registeration extends Component {
 
                     <Button onPress={() => {this.props.navigation.navigate('GetStarted')}} style={{ width: '90%', marginTop: 10, backgroundColor: '#ff6600', alignItems: 'center', justifyContent: 'center' }}>
                         <Text style={{ color: '#fff' }} >Submit</Text>
-                </Button>
+                    </Button>
             
                <View style={{ width: '90%', marginTop: 10, alignItems: 'center', justifyContent: 'center' }}>
                         <Text style={{ color: '#ff6600' }} >Register With</Text>

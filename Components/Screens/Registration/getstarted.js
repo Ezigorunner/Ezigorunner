@@ -8,7 +8,10 @@ export default class GetStarted extends Component {
             <View style={{ flex: 1 }} >
                 <Image source={require('../../../drawable/header.png')} resizeMode="cover" style={{ width: '100%', height: '45%' }} />
                 
-               
+               <Button onPress={() => { this.props.navigation.navigate('Verify')}} >
+
+                   <Text>Next</Text>
+               </Button>
             </View>
         )
     }

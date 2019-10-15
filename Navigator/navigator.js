@@ -10,6 +10,11 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createDrawerNavigator } from 'react-navigation-drawer'
 import MyProfile from '../Components/Screens/MyProfile/index'
 import ChangePassword from '../Components/Screens/ChangePassword/index'
+import FAQ from '../Components/Screens/FAQ/index'
+import TermAndService from '../Components/Screens/TermAndServices/index'
+import Help from '../Components/Screens/Help/index' 
+import CaptainProfile from '../Components/Screens/CaptainProfile/index'
+import Type from '../Components/Screens/Registration/type'
 
 
 const AuthStack = createStackNavigator({
@@ -19,6 +24,9 @@ const AuthStack = createStackNavigator({
         screen: Login
     },
   
+    Type: {
+        screen: Type
+    },
     
     Registeration: {
         screen: Registeration
@@ -47,6 +55,22 @@ const AuthStack = createStackNavigator({
 
     ChangePassword: {
         screen: ChangePassword
+    },
+
+    FAQ: {
+        screen: FAQ
+    },
+
+    TermAndService: {
+        screen: TermAndService
+    },
+
+    Help: {
+        screen: Help
+    },
+
+    CaptainProfile: {
+        screen: CaptainProfile
     },
 
   

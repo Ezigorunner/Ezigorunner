@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Text, View, Image, TouchableOpacity, ImageBackground, Modal, Alert, Platform } from 'react-native'
-import { Container, Header, Content, Footer, FooterTab,  Icon, Button,} from 'native-base';
+import { Container, Header, Content, Footer, FooterTab,  Icon, Button} from 'native-base';
 
 export default class Setting extends Component {
     constructor(props)  {
@@ -52,42 +52,42 @@ export default class Setting extends Component {
                 </Button>
 
 
-                <Button style={{borderBottomWidth:1, borderBottomColor:"gray", flexDirection:"row", padding:"5%"}} transparent>
+                <Button onPress={() => this.props.navigation.navigate("ChangePassword")} style={{borderBottomWidth:1, borderBottomColor:"gray", flexDirection:"row", padding:"5%"}} transparent>
                 <View style={{flexDirection:"row"}}>
                             <View style={{backgroundColor:"pink", height:10, width: 10, marginLeft:"10%"}} />
                             <Text style={{marginLeft:"10%"}} >Identity Card/Passport</Text>
                     </View>
                 </Button>
 
-                <Button style={{borderBottomWidth:1, borderBottomColor:"gray", flexDirection:"row", padding:"5%"}} transparent>
+                <Button onPress={() => this.props.navigation.navigate("TermAndService")} style={{borderBottomWidth:1, borderBottomColor:"gray", flexDirection:"row", padding:"5%"}} transparent>
                 <View style={{flexDirection:"row"}}>
                             <View style={{backgroundColor:"black", height:10, width: 10, marginLeft:"10%"}} />
                             <Text style={{marginLeft:"10%"}} >Term of services</Text>
                     </View>
                 </Button>
 
-                <Button style={{borderBottomWidth:1, borderBottomColor:"gray", flexDirection:"row", padding:"5%"}} transparent>
+                <Button onPress={() => this.props.navigation.navigate("ChangePassword")} style={{borderBottomWidth:1, borderBottomColor:"gray", flexDirection:"row", padding:"5%"}} transparent>
                 <View style={{flexDirection:"row"}}>
                             <View style={{backgroundColor:"purple", height:10, width: 10, marginLeft:"10%"}} />
                             <Text style={{marginLeft:"10%"}} >Privacy and policy</Text>
                     </View>
                 </Button>
 
-                <Button style={{borderBottomWidth:1, borderBottomColor:"gray", flexDirection:"row", padding:"5%"}} transparent>
+                <Button onPress={() => this.props.navigation.navigate("Help")} style={{borderBottomWidth:1, borderBottomColor:"gray", flexDirection:"row", padding:"5%"}} transparent>
                 <View style={{flexDirection:"row"}}>
                             <View style={{backgroundColor:"red", height:10, width: 10, marginLeft:"10%"}} />
                             <Text style={{marginLeft:"10%"}} >About</Text>
                     </View>
                 </Button>
 
-                <Button style={{borderBottomWidth:1, borderBottomColor:"gray", flexDirection:"row", padding:"5%"}} transparent>
+                <Button onPress={() => this.props.navigation.navigate("FAQ")} style={{borderBottomWidth:1, borderBottomColor:"gray", flexDirection:"row", padding:"5%"}} transparent>
                 <View style={{flexDirection:"row"}}>
                             <View style={{backgroundColor:"lightpink", height:10, width: 10, marginLeft:"10%"}} />
                             <Text style={{marginLeft:"10%"}} >FAQ</Text>
                     </View>
                 </Button>
 
-                <Button style={{borderBottomWidth:1, borderBottomColor:"gray", flexDirection:"row", padding:"5%"}} transparent>
+                <Button onPress={() => this.props.navigation.navigate("Auth")} style={{borderBottomWidth:1, borderBottomColor:"gray", flexDirection:"row", padding:"5%"}} transparent>
                 <View style={{flexDirection:"row"}}>
                             <View style={{backgroundColor:"lightgreen", height:10, width: 10, marginLeft:"10%"}} />
                             <Text style={{marginLeft:"10%"}} >Sign Out</Text>
@@ -108,10 +108,10 @@ export default class Setting extends Component {
                             <Icon style={{color:"gray"}} name="google-wallet" type="FontAwesome"/>
                             <Text>Wallet</Text>
                             </Button>
-                            <Button style={{backgroundColor:"#f56200", borderRadius:100, width:"50%"}} vertical>
+                            <Button onPress={() => {this.props.navigation.navigate("CaptainProfile")}} style={{backgroundColor:"#f56200", borderRadius:100, width:"50%"}} vertical>
                             <Icon style={{color:"#fff"}} name="home" type="FontAwesome"/>
                             </Button>
-                            <Button >
+                            <Button onPress={() => {this.props.navigation.navigate('Help')}} >
                             <Icon style={{color:"gray"}} name="question" type="FontAwesome"/>
                             <Text>help</Text>
                             </Button>

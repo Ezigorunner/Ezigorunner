@@ -79,7 +79,7 @@ export default class ChangePassword extends Component {
                             <Icon style={{color:"#fff"}} name="home" type="FontAwesome"/>
                             </Button>
 
-                            <Button >
+                            <Button onPress={() => {this.props.navigation.navigate('Help')}} >
                             <Icon style={{color:"gray"}} name="question" type="FontAwesome"/>
                             <Text>help</Text>
                             </Button>

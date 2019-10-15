@@ -39,7 +39,7 @@ export default class Login extends Component {
                     <TouchableOpacity>
                         <Text style={{ fontWeight: 'bold' }}>Forgotten Password ?</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={() => {this.props.navigation.navigate("Registeration")}} >
+                    <TouchableOpacity onPress={() => {this.props.navigation.navigate("Type")}} >
                         <Text style={{ fontWeight: 'bold' }}>New here? Sign up</Text>
                     </TouchableOpacity>
                 </View>

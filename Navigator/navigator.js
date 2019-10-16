@@ -16,6 +16,10 @@ import Help from '../Components/Screens/Help/index'
 import CaptainProfile from '../Components/Screens/CaptainProfile/index'
 import Type from '../Components/Screens/Registration/type'
 import MapComponent from '../Components/Screens/Map/map'
+import VehicleRegistration from '../Components/Screens/VehicleRegistrantion/index'
+import IdentityCard from '../Components/Screens/IdentityCard/index'
+import DrawerMenu from '../Drawers/riderDrawer'
+import Wallet from '../Components/Screens/Wallet/index'
 
 
 const AuthStack = createStackNavigator({
@@ -78,6 +82,15 @@ const AuthStack = createStackNavigator({
         screen: MapComponent
     },
 
+    
+    IdentityCard: {
+        screen: IdentityCard
+    },
+
+    Wallet: {
+        screen: Wallet
+    },
+
   
   
   });
@@ -85,15 +98,76 @@ const AuthStack = createStackNavigator({
   const AppStackDrawer = createDrawerNavigator({
 
     Setting: {
-        screen: AppStack
+        screen: AppStack,
+        navigationOptions: () => ({
+            title:"Setting",
+            headerTitleStyle: {
+                fontSize:30
+            },
+            headerMode: 'none',
+            headerVisible: false,
+            header:null,
+
+    }),
     },
+
     MyProfile: {
-        screen: MyProfile
+        screen: MyProfile,
+        navigationOptions: () => ({
+            title:"My Profile",
+            headerTitleStyle: {
+                fontSize:30
+            },
+            header:null
+    }),
+
+    },
+
+    CaptainProfile: {
+        screen: CaptainProfile
+    },
+
+    FAQ: {
+        screen: FAQ
+    },
+
+    Help: {
+        screen: Help
+    },
+
+    TermAndService: {
+        screen: TermAndService
+    },
+
+    VehicleRegistration: {
+        screen: createStackNavigator({VehicleRegistration})
     },
 
 
-
-  })
+  },
+  
+  {
+    // initialRouteName: 'Main',
+    contentComponent: DrawerMenu,
+    drawerBackgroundColor: '#f5f5dc',
+    contentOptions: {
+        activeBackgroundColor: 'lightgray',
+        activeTintColor: 'black',
+        style: {
+            borderRightColor: 'orange'
+        },
+        inactiveTintColor: 'black'
+    },
+    // resetOnBlur:true,
+    drawerType:"slide",
+    overlayColor:"transparent",
+    // minSwipeDistance: 0,
+    drawerPosition: 'left',
+    drawerLockMode: "unlocked"
+    
+}
+  
+  )
 
   
 

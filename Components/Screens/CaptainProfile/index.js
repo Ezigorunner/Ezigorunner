@@ -83,6 +83,7 @@ export default class CaptainProfile extends Component {
                             onToggle={() => this.setState({ privateBtn: !this.state.privateBtn })}
                         />
                     </Right>
+                
                 </Header>
 
 

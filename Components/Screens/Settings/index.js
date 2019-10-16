@@ -52,7 +52,7 @@ export default class Setting extends Component {
                 </Button>
 
 
-                <Button onPress={() => this.props.navigation.navigate("ChangePassword")} style={{borderBottomWidth:1, borderBottomColor:"gray", flexDirection:"row", padding:"5%"}} transparent>
+                <Button onPress={() => this.props.navigation.navigate("IdentityCard")} style={{borderBottomWidth:1, borderBottomColor:"gray", flexDirection:"row", padding:"5%"}} transparent>
                 <View style={{flexDirection:"row"}}>
                             <View style={{backgroundColor:"pink", height:10, width: 10, marginLeft:"10%"}} />
                             <Text style={{marginLeft:"10%"}} >Identity Card/Passport</Text>
@@ -104,8 +104,8 @@ export default class Setting extends Component {
                             <Icon style={{color:"gray"}} name="history" type="FontAwesome"/>
                             <Text>History</Text>
                             </Button>
-                            <Button vertical>
-                            <Icon style={{color:"gray"}} name="google-wallet" type="FontAwesome"/>
+                            <Button  onPress={() => {this.props.navigation.navigate("Wallet")}} vertical>
+                            <Icon  style={{color:"gray"}} name="google-wallet" type="FontAwesome"/>
                             <Text>Wallet</Text>
                             </Button>
                             <Button onPress={() => {this.props.navigation.navigate("CaptainProfile")}} style={{backgroundColor:"#f56200", borderRadius:100, width:"50%"}} vertical>
@@ -115,7 +115,7 @@ export default class Setting extends Component {
                             <Icon style={{color:"gray"}} name="question" type="FontAwesome"/>
                             <Text>help</Text>
                             </Button>
-                            <Button vertical>
+                            <Button  onPress={() => {this.props.navigation.navigate('Setting')}} vertical>
                             <Icon style={{color:"#f56200"}} name="cog" type="FontAwesome"/>
                             <Text>Setting</Text>
                             </Button>

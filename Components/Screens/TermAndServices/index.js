@@ -95,34 +95,27 @@ export default class TermAndService extends Component {
 
                 <Footer style={{position:"absolute", bottom:0}}>
                         <FooterTab style={{backgroundColor:"#fff"}}>
-                            
                             <Button vertical>
                             <Icon style={{color:"gray"}} name="history" type="FontAwesome"/>
                             <Text>History</Text>
                             </Button>
-
-                            <Button vertical>
-                            <Icon style={{color:"gray"}} name="google-wallet" type="FontAwesome"/>
+                            <Button  onPress={() => {this.props.navigation.navigate("Wallet")}} vertical>
+                            <Icon  style={{color:"gray"}} name="google-wallet" type="FontAwesome"/>
                             <Text>Wallet</Text>
                             </Button>
-
-                            <Button style={{backgroundColor:"#f56200", borderRadius:100, width:"50%"}} vertical>
+                            <Button onPress={() => {this.props.navigation.navigate("CaptainProfile")}} style={{backgroundColor:"#f56200", borderRadius:100, width:"50%"}} vertical>
                             <Icon style={{color:"#fff"}} name="home" type="FontAwesome"/>
                             </Button>
-
-                            <Button onPress={() => {this.props.navigation.navigate('Help')}}>
-                            <Icon style={{color:"#f56200"}} name="question" type="FontAwesome"/>
+                            <Button onPress={() => {this.props.navigation.navigate('Help')}} >
+                            <Icon style={{color:"gray"}} name="question" type="FontAwesome"/>
                             <Text>help</Text>
                             </Button>
-
-                            <Button onPress={() => this.props.navigation.navigate("Setting")} vertical>
-                            <Icon style={{color:"gray"}} name="cog" type="FontAwesome"/>
+                            <Button  onPress={() => {this.props.navigation.navigate('Setting')}} vertical>
+                            <Icon style={{color:"#f56200"}} name="cog" type="FontAwesome"/>
                             <Text>Setting</Text>
                             </Button>
-
                         </FooterTab>
                  </Footer>
-
 
                  </View>
 

@@ -3,7 +3,6 @@ import { Text, View, Image, TouchableOpacity, ImageBackground, PermissionsAndroi
 import { Item, Input, Button, Icon } from 'native-base'
 import PhoneInput from 'react-native-phone-input'
 import Geolocation from '@react-native-community/geolocation';
-import CountryPicker from 'react-native-country-picker-modal';
 
 export default class GetStarted extends Component {
     constructor() {

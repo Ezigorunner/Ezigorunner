@@ -6,7 +6,7 @@ import Registeration from '../Components/Screens/Registration/index'
 import GetStarted from '../Components/Screens/Registration/getstarted'
 import { createStackNavigator } from 'react-navigation-stack';
 import VehicleRegistration from "../Components/Screens/VehicleRegistrantion";
-
+import Camera from '../Components/Constants/Camera';
 
 const AuthStack = createStackNavigator({
    
@@ -22,7 +22,8 @@ const AuthStack = createStackNavigator({
     Registeration: {
         screen: Registeration
     },
-    VehicleRegistration: VehicleRegistration
+    VehicleRegistration: VehicleRegistration,
+    Camera: Camera
   
   });
 

@@ -7,6 +7,10 @@ import GetStarted from '../Components/Screens/Registration/getstarted'
 import { createStackNavigator } from 'react-navigation-stack';
 import VehicleRegistration from "../Components/Screens/VehicleRegistrantion";
 import Camera from '../Components/Constants/Camera';
+import IdentityCard from "../Components/Screens/IdentityCard";
+import Wallet from "../Components/Screens/Wallet";
+import AddCredit from "../Components/Screens/Wallet/AddCredit";
+
 
 const AuthStack = createStackNavigator({
    
@@ -23,7 +27,10 @@ const AuthStack = createStackNavigator({
         screen: Registeration
     },
     VehicleRegistration: VehicleRegistration,
-    Camera: Camera
+    Camera: Camera,
+    IdentityCard: IdentityCard,
+    Wallet: Wallet,
+    AddCredit: AddCredit
   
   });
 

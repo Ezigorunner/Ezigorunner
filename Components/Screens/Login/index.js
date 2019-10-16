@@ -30,7 +30,7 @@ export default class Login extends Component {
                     <Item  style={{ borderColor: '#ff6600', borderWidth: 5, borderStyle: 'solid', width: '70%', marginTop: 10 }} >
                         <Input placeholder="Password" placeholderTextColor="#ff6600" style={{ textAlign: 'center' }} />
                     </Item>
-                    <Button onPress={() => this.props.navigation.navigate("VehicleRegistration")} style={{ width: '70%', marginTop: 10, backgroundColor: '#ff6600', alignItems: 'center', justifyContent: 'center' }}>
+                    <Button onPress={() => this.props.navigation.navigate("Wallet")} style={{ width: '70%', marginTop: 10, backgroundColor: '#ff6600', alignItems: 'center', justifyContent: 'center' }}>
                         <Text style={{ color: '#fff' }} >Sign in</Text>
                     </Button>
                 </View>

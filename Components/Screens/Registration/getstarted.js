@@ -50,7 +50,7 @@ export default class GetStarted extends Component {
     //   }
 
 
-    async componentDidMount() {
+     componentDidMount = async () =>{
         this.requestCameraPermission()
         // console.log(Geolocation.getCurrentPosition(info => console.log(info)))
         const granted = await PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION)

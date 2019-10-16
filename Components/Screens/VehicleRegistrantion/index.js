@@ -85,6 +85,7 @@ export default class VehicleRegistration extends Component {
             console.log('Response camera = ', response);
             if (response.didCancel) {
                 console.log('User cancelled image camera');
+                this.setState({ [stateKey + "Loader"]: false })
             } else if (response.error) {
                 console.log('camera Error: ', response.error);
             } else if (response.customButton) {

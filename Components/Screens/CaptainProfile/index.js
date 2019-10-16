@@ -252,7 +252,7 @@ export default class CaptainProfile extends Component {
 
                         <View style={{alignContent:"center", alignItems:"center", bottom: 0, position:"absolute", width: "100%"}}>
 
-                    <Button onPress={() => {this.props.navigation.navigate('GetStarted')}} style={{ width: '100%', marginTop: 10, backgroundColor: '#ff6600', alignItems: 'center', justifyContent: 'center' }}>
+                    <Button onPress={() => {this.props.navigation.navigate('Map')}} style={{ width: '100%', marginTop: 10, backgroundColor: '#ff6600', alignItems: 'center', justifyContent: 'center' }}>
                         <Text style={{ color: '#fff' }} >Get Started</Text>
                     </Button>
 

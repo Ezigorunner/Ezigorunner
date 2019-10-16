@@ -15,6 +15,7 @@ import TermAndService from '../Components/Screens/TermAndServices/index'
 import Help from '../Components/Screens/Help/index' 
 import CaptainProfile from '../Components/Screens/CaptainProfile/index'
 import Type from '../Components/Screens/Registration/type'
+import MapComponent from '../Components/Screens/Map/map'
 
 
 const AuthStack = createStackNavigator({
@@ -71,6 +72,10 @@ const AuthStack = createStackNavigator({
 
     CaptainProfile: {
         screen: CaptainProfile
+    },
+
+    Map: {
+        screen: MapComponent
     },
 
   
